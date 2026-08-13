@@ -29,3 +29,16 @@ Foi implementado um vocabulário de domínio customizado (dicionário de substit
 * **Melhoria Absoluta:** 29.80%
 
 O protótipo de voz cumpriu o objetivo da v0.1, reduzindo a taxa de erro a níveis aceitáveis para a sequência do pipeline.
+
+## Release v0.2 - Memória e Recuperação com Evidência (RAG) (Aula 02)
+
+**Objetivo:** Fornecer conhecimento de domínio para o assistente através da arquitetura RAG (Retrieval-Augmented Generation), implementando ingestão governada, chunking semântico, e validando a política de abstenção.
+
+**Metodologia (Ingestão Governada):**
+1. **Corpus:** Extração tática do Capítulo 9 (Regras de Combate) do Livro do Jogador (PDF, 10 páginas).
+2. **Chunking por Fronteira Natural:** Utilização do `RecursiveCharacterTextSplitter` para fatiar o texto respeitando parágrafos e frases (`separators=["\n\n", "\n", ".", " "]`), resultando em 57 chunks semânticos. Evitando assim a quebra de regras do RPG ao meio.
+3. **Embeddings & Vector Store:** Modelo `paraphrase-multilingual-MiniLM-L12-v2` (otimizado para o nosso idioma) operando localmente no ChromaDB.
+
+**Métricas e Validação (Evidência do Teste):**
+* **Sucesso na Recuperação (Recall@k=3):** Ao receber uma pergunta válida ("Quais são os benefícios da meia cobertura?"), o sistema varreu o banco vetorial e retornou o trecho exato (Página 6) que contém a regra.
+* **Trava de Abstenção:** Ao receber uma pergunta fora de escopo ("Traços raciais de um Tiefling"), o sistema recuperou fragmentos irrelacionados, forçando o prompt do agente a não alucinar e acionar o protocolo de abstenção ("Eu não sei").
