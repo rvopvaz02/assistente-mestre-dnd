@@ -1,13 +1,11 @@
 arquivo,locutor,ambiente,referencia
-a01.wav,eu,silencio,O clérigo rola um D20 para acertar o Beholder.
-a02.wav,eu,silencio,A CA do Lich é 17 e ele tem 135 pontos de vida.
-a03.wav,eu,silencio,O mago conjura Mísseis Mágicos e causa três dardos de dano de força.
-a04.wav,eu,silencio,A tiefling ladina usa Ataque Furtivo contra o goblin.
-a05.wav,eu,mesa,O paladino ativa Golpe Divino e rola dois D8 extras de dano radiante.
-a06.wav,eu,mesa,O bárbaro entra em Fúria e faz um teste de Força com Atletismo.
-a07.wav,eu,mesa,O druida mantém concentração depois de sofrer dano do Owlbear.
-a08.wav,eu,mesa,O bardo dá Inspiração Bárdica e o guerreiro rola com vantagem.
-a09.wav,eu,mesa,O kobold está atrás de meia-cobertura e ganha mais dois na CA.
-a10.wav,eu,mesa,O Mind Flayer provoca um ataque de oportunidade ao sair do alcance do monge.
-a11.wav,amigo,mesa,O draconato bruxo gasta um espaço de magia de segundo nível.
-a12.wav,amigo,mesa,Rolem iniciativa: o halfling patrulheiro tirou dezenove no D20.
+amostra_01.m4a,eu,silencio,O clérigo rola um D20 na torre de dados para fazer um teste de resistência de Constituição.
+amostra_02.m4a,eu,silencio,O bruxo tiefling gasta um espaço de magia para conjurar Rajada Mística no goblin.
+amostra_03.m4a,eu,silencio,"A classe de armadura, ou CA, do Lich é 21, então esse ataque não acerta."
+amostra_04.m4a,eu,silencio,"O ladino usa a Ação Astuta como ação bônus, para tentar Ataque Furtivo com vantagem."
+amostra_05.m4a,eu,silencio,"O Mestre rola os D4 na torre de dados, pois a magia Mísseis Mágicos causa dano de força."
+amostra_06.m4a,eu,silencio,"Como uma ação lendária, o Dragão Vermelho Ancião decide usar sua Presença Aterradora."
+amostra_07.m4a,eu,silencio,Rolem iniciativa. O Beholder atira um raio desintegrador do seu olho central.
+amostra_08.m4a,eu,silencio,O paladino falha no teste e sofre a condição de agarrado pelo cubo gelatinoso no Underdark.
+amostra_09.m4a,eu,silencio,O guerreiro decide ativar o Surto de Ação para realizar um ataque extra corpo a corpo.
+amostra_10.m4a,eu,silencio,"O bardo conjura Palavra Curativa como ação bônus, curando 1d4 mais o modificador de Carisma."

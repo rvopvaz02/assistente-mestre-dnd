@@ -1,0 +1,275 @@
+{
+  "modelo": "large-v3-turbo",
+  "dispositivo": "cuda",
+  "n_amostras": 10,
+  "prompt": "Sessão de RPG de mesa, Dungeons & Dragons 5ª edição. Termos: Beholder, Tiefling, Lich, Mísseis Mágicos, CA, D20, D4, D6, D8, D10, D12, PV, Clérigo, Paladino, Feiticeiro, Bruxo, Druida, Ladino, Bárbaro, Patrulheiro, Bardo, Mago, Monge, Guerreiro, Draconato, Gnomo, Halfling, Meio-Orc, Meio-Elfo, Anão, Elfo, Owlbear, Mind Flayer, Kobold, Goblin, Bugbear, Dragonborn, Bola de Fogo, Palavra Curativa, Ataque Furtivo, Fúria, Golpe Divino, Inspiração Bárdica, vantagem, desvantagem, teste de resistência, iniciativa, espaço de magia, concentração, ataque de oportunidade, meia-cobertura.",
+  "wer_geral": {
+    "base": 0.0789,
+    "prompt": 0.0724,
+    "base+dic_loo": 0.0789,
+    "prompt+dic_loo": 0.0724,
+    "base+dic_vaz": 0.0789,
+    "prompt+llm": 0.0658
+  },
+  "acerto_termos": {
+    "base": 0.92,
+    "prompt": 0.96,
+    "base+dic_loo": 0.92,
+    "prompt+dic_loo": 0.96,
+    "base+dic_vaz": 0.92,
+    "prompt+llm": 1.0
+  },
+  "n_termos": 25,
+  "estratos": {
+    "ambiente=silencio": {
+      "n": 10,
+      "base": 0.0789,
+      "prompt": 0.0724,
+      "base+dic_loo": 0.0789,
+      "prompt+dic_loo": 0.0724,
+      "base+dic_vaz": 0.0789,
+      "prompt+llm": 0.0658
+    },
+    "locutor=eu": {
+      "n": 10,
+      "base": 0.0789,
+      "prompt": 0.0724,
+      "base+dic_loo": 0.0789,
+      "prompt+dic_loo": 0.0724,
+      "base+dic_vaz": 0.0789,
+      "prompt+llm": 0.0658
+    }
+  },
+  "amostras": [
+    {
+      "arquivo": "amostra_01.m4a",
+      "locutor": "eu",
+      "ambiente": "silencio",
+      "referencia": "O clérigo rola um D20 na torre de dados para fazer um teste de resistência de Constituição.",
+      "rtf": 0.043,
+      "hipoteses": {
+        "base": "O clérigo rola um D20 na torre de dados para fazer um teste de resistência de constituição.",
+        "prompt": "O clérigo rola um D20 na torre de dados para fazer um teste de resistência de constituição.",
+        "base+dic_loo": "O clérigo rola um D20 na torre de dados para fazer um teste de resistência de constituição.",
+        "prompt+dic_loo": "O clérigo rola um D20 na torre de dados para fazer um teste de resistência de constituição.",
+        "base+dic_vaz": "O clérigo rola um D20 na torre de dados para fazer um teste de resistência de constituição.",
+        "prompt+llm": "O clérigo rola um D20 na torre de dados para fazer um teste de resistência de constituição."
+      },
+      "wer": {
+        "base": 0.0,
+        "prompt": 0.0,
+        "base+dic_loo": 0.0,
+        "prompt+dic_loo": 0.0,
+        "base+dic_vaz": 0.0,
+        "prompt+llm": 0.0
+      }
+    },
+    {
+      "arquivo": "amostra_02.m4a",
+      "locutor": "eu",
+      "ambiente": "silencio",
+      "referencia": "O bruxo tiefling gasta um espaço de magia para conjurar Rajada Mística no goblin.",
+      "rtf": 0.037,
+      "hipoteses": {
+        "base": "O bruxo Tiflin gasta um espaço de magia para conjurar a rajada mística no Goblin.",
+        "prompt": "O Bruxo Tiefling gasta um espaço de magia para conjurar Rajada Mística no Goblin.",
+        "base+dic_loo": "O bruxo Tiflin gasta um espaço de magia para conjurar a rajada mística no Goblin.",
+        "prompt+dic_loo": "O Bruxo Tiefling gasta um espaço de magia para conjurar Rajada Mística no Goblin.",
+        "base+dic_vaz": "O bruxo Tiflin gasta um espaço de magia para conjurar a rajada mística no Goblin.",
+        "prompt+llm": "O Bruxo Tiefling gasta um espaço de magia para conjurar Rajada Mística no Goblin."
+      },
+      "wer": {
+        "base": 0.1429,
+        "prompt": 0.0,
+        "base+dic_loo": 0.1429,
+        "prompt+dic_loo": 0.0,
+        "base+dic_vaz": 0.1429,
+        "prompt+llm": 0.0
+      }
+    },
+    {
+      "arquivo": "amostra_03.m4a",
+      "locutor": "eu",
+      "ambiente": "silencio",
+      "referencia": "A classe de armadura, ou CA, do Lich é 21, então esse ataque não acerta.",
+      "rtf": 0.039,
+      "hipoteses": {
+        "base": "A classe de armadura ou CA do lixo é 21, então esse ataque não acerta.",
+        "prompt": "A classe de armadura, ou CA do Lich é 21, então esse ataque não acerta.",
+        "base+dic_loo": "A classe de armadura ou CA do lixo é 21, então esse ataque não acerta.",
+        "prompt+dic_loo": "A classe de armadura, ou CA do Lich é 21, então esse ataque não acerta.",
+        "base+dic_vaz": "A classe de armadura ou CA do lixo é 21, então esse ataque não acerta.",
+        "prompt+llm": "A classe de armadura, ou CA do Lich é 21, então esse ataque não acerta."
+      },
+      "wer": {
+        "base": 0.0667,
+        "prompt": 0.0,
+        "base+dic_loo": 0.0667,
+        "prompt+dic_loo": 0.0,
+        "base+dic_vaz": 0.0667,
+        "prompt+llm": 0.0
+      }
+    },
+    {
+      "arquivo": "amostra_04.m4a",
+      "locutor": "eu",
+      "ambiente": "silencio",
+      "referencia": "O ladino usa a Ação Astuta como ação bônus, para tentar Ataque Furtivo com vantagem.",
+      "rtf": 0.039,
+      "hipoteses": {
+        "base": "O Ladino usa a ação astuta como ação bônus, para tentar ataque furtivo com vantagem.",
+        "prompt": "O Ladino usa a ação astuta como ação bônus, para tentar ataque furtivo com vantagem.",
+        "base+dic_loo": "O Ladino usa a ação astuta como ação bônus, para tentar ataque furtivo com vantagem.",
+        "prompt+dic_loo": "O Ladino usa a ação astuta como ação bônus, para tentar ataque furtivo com vantagem.",
+        "base+dic_vaz": "O Ladino usa a ação astuta como ação bônus, para tentar ataque furtivo com vantagem.",
+        "prompt+llm": "O Ladino usa a ação astuta como ação bônus, para tentar ataque furtivo com vantagem."
+      },
+      "wer": {
+        "base": 0.0,
+        "prompt": 0.0,
+        "base+dic_loo": 0.0,
+        "prompt+dic_loo": 0.0,
+        "base+dic_vaz": 0.0,
+        "prompt+llm": 0.0
+      }
+    },
+    {
+      "arquivo": "amostra_05.m4a",
+      "locutor": "eu",
+      "ambiente": "silencio",
+      "referencia": "O Mestre rola os D4 na torre de dados, pois a magia Mísseis Mágicos causa dano de força.",
+      "rtf": 0.04,
+      "hipoteses": {
+        "base": "O Mestre rola os D4 nos torjos de dados, pois a magia Mísseis Mágicos causa dano de força.",
+        "prompt": "O mestre rola os T4 nos torjos de dados, pois a magia Mísseis Mágicos causa dano de força.",
+        "base+dic_loo": "O Mestre rola os D4 nos torjos de dados, pois a magia Mísseis Mágicos causa dano de força.",
+        "prompt+dic_loo": "O mestre rola os T4 nos torjos de dados, pois a magia Mísseis Mágicos causa dano de força.",
+        "base+dic_vaz": "O Mestre rola os D4 nos torjos de dados, pois a magia Mísseis Mágicos causa dano de força.",
+        "prompt+llm": "O mestre rola os D4 nos torjos de dados, pois a magia Mísseis Mágicos causa dano de força."
+      },
+      "wer": {
+        "base": 0.1111,
+        "prompt": 0.1667,
+        "base+dic_loo": 0.1111,
+        "prompt+dic_loo": 0.1667,
+        "base+dic_vaz": 0.1111,
+        "prompt+llm": 0.1111
+      }
+    },
+    {
+      "arquivo": "amostra_06.m4a",
+      "locutor": "eu",
+      "ambiente": "silencio",
+      "referencia": "Como uma ação lendária, o Dragão Vermelho Ancião decide usar sua Presença Aterradora.",
+      "rtf": 0.037,
+      "hipoteses": {
+        "base": "Como uma ação lendária, o Dragão Vermelho Ancião decidiu usar sua presença aterradora.",
+        "prompt": "Como uma ação lendária, o Dragão Vermelho Ancião decidirá sua presença aterradora.",
+        "base+dic_loo": "Como uma ação lendária, o Dragão Vermelho Ancião decidiu usar sua presença aterradora.",
+        "prompt+dic_loo": "Como uma ação lendária, o Dragão Vermelho Ancião decidirá sua presença aterradora.",
+        "base+dic_vaz": "Como uma ação lendária, o Dragão Vermelho Ancião decidiu usar sua presença aterradora.",
+        "prompt+llm": "Como uma ação lendária, o Dragão Vermelho Ancião decidirá sua presença aterradora."
+      },
+      "wer": {
+        "base": 0.0769,
+        "prompt": 0.1538,
+        "base+dic_loo": 0.0769,
+        "prompt+dic_loo": 0.1538,
+        "base+dic_vaz": 0.0769,
+        "prompt+llm": 0.1538
+      }
+    },
+    {
+      "arquivo": "amostra_07.m4a",
+      "locutor": "eu",
+      "ambiente": "silencio",
+      "referencia": "Rolem iniciativa. O Beholder atira um raio desintegrador do seu olho central.",
+      "rtf": 0.04,
+      "hipoteses": {
+        "base": "Role em iniciativa. O Beholder atira um raio desintegrador do seu olho central.",
+        "prompt": "Role em iniciativa. O Beholder atira um raio desintegrador do seu olho central.",
+        "base+dic_loo": "Role em iniciativa. O Beholder atira um raio desintegrador do seu olho central.",
+        "prompt+dic_loo": "Role em iniciativa. O Beholder atira um raio desintegrador do seu olho central.",
+        "base+dic_vaz": "Role em iniciativa. O Beholder atira um raio desintegrador do seu olho central.",
+        "prompt+llm": "Role em iniciativa. O Beholder atira um raio desintegrador do seu olho central."
+      },
+      "wer": {
+        "base": 0.1667,
+        "prompt": 0.1667,
+        "base+dic_loo": 0.1667,
+        "prompt+dic_loo": 0.1667,
+        "base+dic_vaz": 0.1667,
+        "prompt+llm": 0.1667
+      }
+    },
+    {
+      "arquivo": "amostra_08.m4a",
+      "locutor": "eu",
+      "ambiente": "silencio",
+      "referencia": "O paladino falha no teste e sofre a condição de agarrado pelo cubo gelatinoso no Underdark.",
+      "rtf": 0.036,
+      "hipoteses": {
+        "base": "O paladino falha no teste e sofre a condição de agarrado pelo cubo gelatinoso em Underdark.",
+        "prompt": "O paladino falha no teste e sofre a condição de agarrado pelo cubo gelatinoso em Underdark.",
+        "base+dic_loo": "O paladino falha no teste e sofre a condição de agarrado pelo cubo gelatinoso em Underdark.",
+        "prompt+dic_loo": "O paladino falha no teste e sofre a condição de agarrado pelo cubo gelatinoso em Underdark.",
+        "base+dic_vaz": "O paladino falha no teste e sofre a condição de agarrado pelo cubo gelatinoso em Underdark.",
+        "prompt+llm": "O paladino falha no teste e sofre a condição de agarrado pelo cubo gelatinoso em Underdark."
+      },
+      "wer": {
+        "base": 0.0625,
+        "prompt": 0.0625,
+        "base+dic_loo": 0.0625,
+        "prompt+dic_loo": 0.0625,
+        "base+dic_vaz": 0.0625,
+        "prompt+llm": 0.0625
+      }
+    },
+    {
+      "arquivo": "amostra_09.m4a",
+      "locutor": "eu",
+      "ambiente": "silencio",
+      "referencia": "O guerreiro decide ativar o Surto de Ação para realizar um ataque extra corpo a corpo.",
+      "rtf": 0.044,
+      "hipoteses": {
+        "base": "O guerreiro decide ativar o surto de ação para realizar um ataque extra de corpo a corpo.",
+        "prompt": "O Guerreiro decide ativar o Surto de Ação para realizar um ataque extra de corpo a corpo.",
+        "base+dic_loo": "O guerreiro decide ativar o surto de ação para realizar um ataque extra de corpo a corpo.",
+        "prompt+dic_loo": "O Guerreiro decide ativar o Surto de Ação para realizar um ataque extra de corpo a corpo.",
+        "base+dic_vaz": "O guerreiro decide ativar o surto de ação para realizar um ataque extra de corpo a corpo.",
+        "prompt+llm": "O Guerreiro decide ativar o Surto de Ação para realizar um ataque extra de corpo a corpo."
+      },
+      "wer": {
+        "base": 0.0625,
+        "prompt": 0.0625,
+        "base+dic_loo": 0.0625,
+        "prompt+dic_loo": 0.0625,
+        "base+dic_vaz": 0.0625,
+        "prompt+llm": 0.0625
+      }
+    },
+    {
+      "arquivo": "amostra_10.m4a",
+      "locutor": "eu",
+      "ambiente": "silencio",
+      "referencia": "O bardo conjura Palavra Curativa como ação bônus, curando 1d4 mais o modificador de Carisma.",
+      "rtf": 0.038,
+      "hipoteses": {
+        "base": "O bardo conjura a palavra curativa como ação bônus, curando 1d4 mais um modificador de carisma.",
+        "prompt": "O Bardo conjura a palavra curativa como ação bônus, curando um D4 mais um modificador de carisma.",
+        "base+dic_loo": "O bardo conjura a palavra curativa como ação bônus, curando 1d4 mais um modificador de carisma.",
+        "prompt+dic_loo": "O Bardo conjura a palavra curativa como ação bônus, curando um D4 mais um modificador de carisma.",
+        "base+dic_vaz": "O bardo conjura a palavra curativa como ação bônus, curando 1d4 mais um modificador de carisma.",
+        "prompt+llm": "O Bardo conjura a Palavra Curativa como ação bônus, curando um D4 mais um modificador de Carisma."
+      },
+      "wer": {
+        "base": 0.125,
+        "prompt": 0.125,
+        "base+dic_loo": 0.125,
+        "prompt+dic_loo": 0.125,
+        "base+dic_vaz": 0.125,
+        "prompt+llm": 0.125
+      }
+    }
+  ]
+}

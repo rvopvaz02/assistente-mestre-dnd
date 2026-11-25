@@ -69,9 +69,26 @@ uv run pytest                       # testes unitários
 
 ### Voz (WER)
 
-O protocolo está em [`data/audio/README.md`](data/audio/README.md). O script compara cinco condições: Whisper puro, prompt de vocabulário, dicionário *leave-one-out*, as duas combinadas e pós-correção por LLM. Também calcula a versão "com vazamento" do dicionário, apenas para mostrar quanto ela infla o número.
+Corpus: 10 frases próprias (cerca de 8 s cada), gravadas no celular em ambiente silencioso, com 25 ocorrências de termos de D&D. As transcrições de referência estão em [`data/audio/refs.csv`](data/audio/refs.csv) e o protocolo em [`data/audio/README.md`](data/audio/README.md). Além do WER, o script mede o **acerto de termos de D&D**: a fração dos termos da referência que aparecem corretos na transcrição. Para o assistente, esse é o número que importa: errar "no" por "em" não muda a pergunta, errar "Lich" por "lixo" muda.
 
-> **Revisão da v0.1.** A primeira versão relatou WER de 33,11% → 3,31%. Esse número usava um dicionário de correções montado a partir dos erros das mesmas 10 amostras em que foi medido, então mede memorização e não generalização. A medição é refeita com o novo protocolo e os resultados ficam em `results/wer_<modelo>.md`.
+| Condição | Whisper `base`: WER | `base`: termos | `large-v3-turbo`: WER | `turbo`: termos |
+|---|---|---|---|---|
+| Whisper puro | 33,6% | 64% | 7,9% | 92% |
+| + prompt de vocabulário | 28,3% | 84% | 7,2% | 96% |
+| + dicionário de correções (*leave-one-out*) | 33,6% | 64% | 7,9% | 92% |
+| + dicionário **com vazamento** (só referência) | 27,6% | 84% | 7,9% | 92% |
+| **+ prompt + pós-correção por LLM** | **19,1%** | **100%** | **6,6%** | **100%** |
+
+Conclusões:
+
+1. **Trocar o modelo foi a maior alavanca.** O `large-v3-turbo` na GPU tem WER 4× menor que o `base` sem nenhuma adaptação, e transcreve cada frase em menos de 1 s.
+2. **O dicionário de correções não generaliza.** Medido com *leave-one-out*, o ganho foi zero, porque cada erro só aparecia na amostra de onde ele foi tirado. O ganho só aparece com vazamento.
+3. **Prompt de vocabulário e pós-correção por LLM generalizam**, porque não dependem de erros observados. As duas juntas levam o acerto de termos a 100% nos dois modelos. O LLM corrigiu, por exemplo, "T4" para "D4", um erro que o próprio prompt tinha introduzido.
+4. Os erros que sobram no `turbo` são de palavras gramaticais ("Role em" no lugar de "Rolem", "em Underdark" no lugar de "no Underdark", "decidirá" no lugar de "decide usar"). Eles não afetam a consulta às regras.
+
+> **Revisão da v0.1.** A primeira versão relatou WER de 33,11% → 3,31% com o Whisper `base`. O 33% se confirma (33,6% aqui). O 3,31% vinha de um dicionário montado com os erros das mesmas 10 amostras em que foi medido, ou seja, media memorização. No protocolo sem vazamento, o mesmo `base` chega a 19,1% com prompt + LLM, e o sistema final (`turbo` + prompt + LLM) chega a 6,6%.
+
+**Limitações da medição.** São só 10 amostras, de um único locutor, todas em silêncio. Não há ainda estrato com barulho de mesa nem com outros sotaques. Além disso, 4 dos termos do vocabulário (Beholder, Tiefling, Lich, Mísseis Mágicos) foram escolhidos sabendo que apareciam nessas gravações, o que favorece um pouco o prompt. O LLM recebe a mesma lista e tem o mesmo viés. Para remover esse viés, é preciso gravar um segundo lote de frases novas sem alterar a lista. A pós-correção por LLM também acrescenta cerca de 1 s e uma chamada de API por fala.
 
 Achado de engenharia: passar a lista de termos ao mesmo tempo como `initial_prompt` e `hotwords` fez o `large-v3-turbo` entrar em laço de repetição (WER > 200%). Por isso o sistema usa só o `initial_prompt`.
 

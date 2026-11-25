@@ -25,7 +25,7 @@ from pathlib import Path
 from mestre import config
 from mestre.asr.transcriber import Transcriber
 from mestre.asr.vocab import CorrectionDict, build_prompt, llm_correct, load_terms
-from mestre.asr.wer import sample_wer, wer
+from mestre.asr.wer import sample_wer, term_hits, wer
 
 
 def load_refs(audio_dir: Path) -> list[dict]:
@@ -89,8 +89,15 @@ def run(model: str, audio_dir: Path) -> dict:
         for g, items in groups.items():
             strata[g] = {"n": len(items), **{c: round(wer([i["referencia"] for i in items],
                                                           [i["hipoteses"][c] for i in items]), 4) for c in conds}}
-    return {"modelo": model, "dispositivo": asr.device, "n_amostras": len(per_sample),
-            "prompt": prompt, "wer_geral": overall, "estratos": strata, "amostras": per_sample}
+    terms_acc = {}
+    for c in conds:
+        hits = [term_hits(s["referencia"], s["hipoteses"][c], terms) for s in per_sample]
+        found, total = sum(h[0] for h in hits), sum(h[1] for h in hits)
+        terms_acc[c] = round(found / total, 4) if total else None
+    return {"modelo": model, "dispositivo": asr.device, "n_amostras": len(per_sample), "prompt": prompt,
+            "wer_geral": overall, "acerto_termos": terms_acc,
+            "n_termos": sum(term_hits(s["referencia"], s["referencia"], terms)[1] for s in per_sample),
+            "estratos": strata, "amostras": per_sample}
 
 
 def to_markdown(res: dict) -> str:
@@ -100,6 +107,8 @@ def to_markdown(res: dict) -> str:
              "| **Geral** | " + str(res["n_amostras"]) + " | " + " | ".join(f"{res['wer_geral'][c]:.1%}" for c in conds) + " |"]
     for g, v in res["estratos"].items():
         lines.append(f"| {g} | {v['n']} | " + " | ".join(f"{v[c]:.1%}" for c in conds) + " |")
+    lines.append(f"| **Acerto de termos de D&D** ↑ | {res['n_termos']} termos | "
+                 + " | ".join(f"{res['acerto_termos'][c]:.1%}" for c in conds) + " |")
     lines += ["", "`dic_loo` = dicionário avaliado com leave-one-out; `dic_vaz` = com vazamento (só referência).", ""]
     return "\n".join(lines)
 

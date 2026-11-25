@@ -22,3 +22,13 @@ def test_dicionario_leave_one_out():
     # avaliando a01, a correção que veio de a01 não pode ser usada
     assert d.apply("o be roder ataca", exclude_origin="a01.wav") == "o be roder ataca"
     assert d.apply("a seado lixo", exclude_origin="a01.wav") == "a CA do Lich"
+
+
+def test_notacao_de_dados_equivalente():
+    assert normalize("curando 1d4") == normalize("curando um D4")
+
+
+def test_acerto_de_termos():
+    from mestre.asr.wer import term_hits
+
+    assert term_hits("A CA do Lich é 21", "a CA do lixo é 21", ["Lich", "CA"]) == (1, 2)
