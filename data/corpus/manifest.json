@@ -1,0 +1,30 @@
+{
+  "_comentario": "Fontes do RAG. Os arquivos ficam fora do Git (direitos autorais). 'caminho' pode ser absoluto ou relativo a data/corpus/. 'paginas' usa a numeração do PDF (1 = primeira folha do arquivo).",
+  "fontes": [
+    {
+      "id": "phb-ptbr",
+      "titulo": "Livro do Jogador D&D 5e (PT-BR)",
+      "caminho": "livro_do_jogador.pdf",
+      "versao": "5e-2014-ptbr",
+      "vigente_desde": "2014-08-19",
+      "vigente_ate": null,
+      "permissao": "jogadores",
+      "paginas": [[174, 206]],
+      "capitulos": {
+        "174": "Capítulo 7: Utilizando Habilidades",
+        "182": "Capítulo 8: Aventurando-se",
+        "189": "Capítulo 9: Combate",
+        "201": "Capítulo 10: Conjurando Magias"
+      }
+    },
+    {
+      "id": "notas-mestre",
+      "titulo": "Notas da campanha (somente Mestre)",
+      "caminho": "notas_mestre.md",
+      "versao": "1",
+      "vigente_desde": "2026-11-24",
+      "vigente_ate": null,
+      "permissao": "mestre"
+    }
+  ]
+}

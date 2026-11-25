@@ -1,0 +1,65 @@
+# Vocabulário de domínio para o prompt do Whisper (um termo por linha; '#' inicia comentário).
+# Ordem importa: o prompt é cortado em ~600 caracteres, então os termos mais confundidos vêm primeiro.
+Beholder
+Tiefling
+Lich
+Mísseis Mágicos
+CA
+D20
+D4
+D6
+D8
+D10
+D12
+PV
+Clérigo
+Paladino
+Feiticeiro
+Bruxo
+Druida
+Ladino
+Bárbaro
+Patrulheiro
+Bardo
+Mago
+Monge
+Guerreiro
+Draconato
+Gnomo
+Halfling
+Meio-Orc
+Meio-Elfo
+Anão
+Elfo
+Owlbear
+Mind Flayer
+Kobold
+Goblin
+Bugbear
+Dragonborn
+Bola de Fogo
+Palavra Curativa
+Ataque Furtivo
+Fúria
+Golpe Divino
+Inspiração Bárdica
+vantagem
+desvantagem
+teste de resistência
+iniciativa
+espaço de magia
+concentração
+ataque de oportunidade
+meia-cobertura
+cobertura de três-quartos
+Destreza
+Constituição
+Sabedoria
+Carisma
+Inteligência
+Força
+Atletismo
+Acrobacia
+Furtividade
+Percepção
+Mestre

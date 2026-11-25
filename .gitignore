@@ -216,3 +216,16 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- Assistente de Mestre ---
+.env
+.venv
+# material protegido por direitos autorais e artefatos derivados dele
+data/corpus/*.pdf
+data/processed/
+# áudios pessoais (as referências em refs.csv são versionadas)
+data/audio/*.wav
+data/audio/*.mp3
+data/audio/*.m4a
+data/audio/*.ogg
+outputs/
