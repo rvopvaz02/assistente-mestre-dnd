@@ -19,7 +19,9 @@ DATA_DIR = ROOT / "data"
 RESULTS_DIR = ROOT / "results"
 
 # --- LLM (Gemini) ---
-GEMINI_MODEL = _env("GEMINI_MODEL", "gemini-3.5-flash-lite")
+GEMINI_MODEL = _env("GEMINI_MODEL", "gemini-3.5-flash-lite")  # respostas em tempo real
+# Leitura visual das páginas: roda uma vez, offline, com cache. Trocamos latência por qualidade.
+VISION_PAGES_MODEL = _env("VISION_PAGES_MODEL", "gemini-3.5-flash")
 
 # --- Voz ---
 WHISPER_MODEL = _env("WHISPER_MODEL", "large-v3-turbo")

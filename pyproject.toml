@@ -19,6 +19,8 @@ dependencies = [
     "chromadb>=0.5",
     "sentence-transformers>=3.0",
     "torch>=2.7",
+    "pypdfium2>=5.15.2",
+    "pillow>=13.0.0",
 ]
 
 [project.optional-dependencies]

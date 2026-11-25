@@ -12,7 +12,7 @@ from mestre import config
 
 class LLM(Protocol):
     def generate(self, prompt: str, *, system: str | None = None,
-                 images: list[tuple[bytes, str]] | None = None) -> "LLMResult": ...
+                 images: list[tuple[bytes, str]] | None = None, json_mode: bool = False) -> "LLMResult": ...
 
 
 @dataclass
@@ -39,12 +39,13 @@ class GeminiLLM:
         self.temperature = temperature
 
     def generate(self, prompt: str, *, system: str | None = None,
-                 images: list[tuple[bytes, str]] | None = None) -> LLMResult:
+                 images: list[tuple[bytes, str]] | None = None, json_mode: bool = False) -> LLMResult:
         from google.genai import types
 
         parts: list = [types.Part.from_bytes(data=b, mime_type=m) for b, m in (images or [])]
         parts.append(prompt)
-        cfg = types.GenerateContentConfig(system_instruction=system, temperature=self.temperature)
+        cfg = types.GenerateContentConfig(system_instruction=system, temperature=self.temperature,
+                                          response_mime_type="application/json" if json_mode else None)
         t0 = time.perf_counter()
         resp = self._call_with_retry(parts, cfg)
         dt = time.perf_counter() - t0

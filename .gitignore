@@ -229,3 +229,8 @@ data/audio/*.mp3
 data/audio/*.m4a
 data/audio/*.ogg
 outputs/
+# fotos pessoais da mesa (o gabarito é versionado)
+data/mesa/*.jpg
+data/mesa/*.jpeg
+data/mesa/*.png
+data/mesa/*.heic

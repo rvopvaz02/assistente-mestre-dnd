@@ -1,0 +1,12 @@
+{"id": "v01", "pergunta": "Qual o modificador de um valor de habilidade 15?", "resposta_contem": ["+2"], "elemento": "tabela modificadores"}
+{"id": "v02", "pergunta": "Um personagem com Força 8 tem que modificador?", "resposta_contem": ["-1"], "elemento": "tabela modificadores"}
+{"id": "v03", "pergunta": "Qual o modificador para um valor de habilidade 30?", "resposta_contem": ["+10"], "elemento": "tabela modificadores"}
+{"id": "v04", "pergunta": "Qual o modificador de quem tem Destreza 21?", "resposta_contem": ["+5"], "elemento": "tabela modificadores"}
+{"id": "v05", "pergunta": "Qual a CD de uma tarefa difícil?", "resposta_contem": ["20"], "elemento": "tabela CD"}
+{"id": "v06", "pergunta": "Qual a CD de uma tarefa quase impossível?", "resposta_contem": ["30"], "elemento": "tabela CD"}
+{"id": "v07", "pergunta": "Quantos quilômetros por dia o grupo anda em ritmo lento?", "resposta_contem": ["27"], "elemento": "tabela ritmo"}
+{"id": "v08", "pergunta": "Que penalidade o grupo sofre ao viajar em ritmo rápido?", "resposta_contem": ["-5"], "elemento": "tabela ritmo"}
+{"id": "v09", "pergunta": "Quantos metros por minuto o grupo anda em ritmo normal?", "resposta_contem": ["90"], "elemento": "tabela ritmo"}
+{"id": "v10", "pergunta": "Quanto espaço ocupa uma criatura Grande?", "resposta_contem": ["3 m"], "elemento": "tabela tamanho"}
+{"id": "v11", "pergunta": "Qual o espaço de uma criatura Miúda?", "resposta_contem": ["0,75"], "elemento": "tabela tamanho"}
+{"id": "v12", "pergunta": "Qual o espaço de uma criatura Enorme?", "resposta_contem": ["4,5"], "elemento": "tabela tamanho"}

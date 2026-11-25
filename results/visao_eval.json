@@ -1,0 +1,333 @@
+{
+  "modelo_resposta": "gemini-3.5-flash-lite",
+  "modelo_visao": "gemini-3.5-flash",
+  "chunks": {
+    "texto": 228,
+    "texto+visao": 232
+  },
+  "texto": [
+    {
+      "id": "v01",
+      "elemento": "tabela modificadores",
+      "correta": true,
+      "abstencao": false,
+      "citou_visao": false,
+      "resposta": "O modificador para um valor de habilidade 15 é +2 [2].",
+      "fontes": [
+        "[2] Livro do Jogador D&D 5e (PT-BR), Valores E Modificadores De Habilidade, p. 175"
+      ],
+      "latencia_s": 7.196
+    },
+    {
+      "id": "v02",
+      "elemento": "tabela modificadores",
+      "correta": false,
+      "abstencao": true,
+      "citou_visao": false,
+      "resposta": "Não encontrei essa regra no material carregado, então prefiro não responder.",
+      "fontes": [],
+      "latencia_s": 1.015
+    },
+    {
+      "id": "v03",
+      "elemento": "tabela modificadores",
+      "correta": true,
+      "abstencao": false,
+      "citou_visao": false,
+      "resposta": "O modificador para um valor de habilidade 30 é +10 [1][2].",
+      "fontes": [
+        "[1] Livro do Jogador D&D 5e (PT-BR), De Habilidade, p. 175",
+        "[2] Livro do Jogador D&D 5e (PT-BR), Valores E Modificadores De Habilidade, p. 175"
+      ],
+      "latencia_s": 1.163
+    },
+    {
+      "id": "v04",
+      "elemento": "tabela modificadores",
+      "correta": false,
+      "abstencao": true,
+      "citou_visao": false,
+      "resposta": "Não encontrei essa regra no material carregado, então prefiro não responder.",
+      "fontes": [],
+      "latencia_s": 0.963
+    },
+    {
+      "id": "v05",
+      "elemento": "tabela CD",
+      "correta": true,
+      "abstencao": false,
+      "citou_visao": false,
+      "resposta": "A CD de uma tarefa difícil é 20 [2].",
+      "fontes": [
+        "[2] Livro do Jogador D&D 5e (PT-BR), Classes De Dificuldade Típicas, p. 176"
+      ],
+      "latencia_s": 1.044
+    },
+    {
+      "id": "v06",
+      "elemento": "tabela CD",
+      "correta": true,
+      "abstencao": false,
+      "citou_visao": false,
+      "resposta": "A Classe de Dificuldade (CD) para uma tarefa quase impossível é 30 [1].",
+      "fontes": [
+        "[1] Livro do Jogador D&D 5e (PT-BR), Classes De Dificuldade Típicas, p. 176"
+      ],
+      "latencia_s": 1.019
+    },
+    {
+      "id": "v07",
+      "elemento": "tabela ritmo",
+      "correta": true,
+      "abstencao": false,
+      "citou_visao": false,
+      "resposta": "O grupo anda 27 quilômetros por dia quando viaja em um ritmo lento [3].",
+      "fontes": [
+        "[3] Livro do Jogador D&D 5e (PT-BR), Ritmo De Viagem, p. 184"
+      ],
+      "latencia_s": 1.199
+    },
+    {
+      "id": "v08",
+      "elemento": "tabela ritmo",
+      "correta": true,
+      "abstencao": false,
+      "citou_visao": false,
+      "resposta": "Ao viajar em ritmo rápido, os personagens sofrem uma penalidade de –5 no valor de Sabedoria (Percepção) passiva para perceber ameaças escondidas [3][4]. Além disso, esse ritmo deixa os personagens com menos percepção [1].",
+      "fontes": [
+        "[1] Livro do Jogador D&D 5e (PT-BR), Ritmo De Viagem, p. 183",
+        "[3] Livro do Jogador D&D 5e (PT-BR), Percebendo Ameaças, p. 184",
+        "[4] Livro do Jogador D&D 5e (PT-BR), Ritmo De Viagem, p. 184"
+      ],
+      "latencia_s": 1.165
+    },
+    {
+      "id": "v09",
+      "elemento": "tabela ritmo",
+      "correta": true,
+      "abstencao": false,
+      "citou_visao": false,
+      "resposta": "Em ritmo normal, o grupo anda 90 metros por minuto [1].",
+      "fontes": [
+        "[1] Livro do Jogador D&D 5e (PT-BR), Ritmo De Viagem, p. 184"
+      ],
+      "latencia_s": 1.342
+    },
+    {
+      "id": "v10",
+      "elemento": "tabela tamanho",
+      "correta": false,
+      "abstencao": true,
+      "citou_visao": false,
+      "resposta": "Não encontrei essa regra no material carregado, então prefiro não responder.",
+      "fontes": [],
+      "latencia_s": 1.125
+    },
+    {
+      "id": "v11",
+      "elemento": "tabela tamanho",
+      "correta": true,
+      "abstencao": false,
+      "citou_visao": false,
+      "resposta": "O espaço de uma criatura Miúda é de 0,75 m por 0,75 m [4].",
+      "fontes": [
+        "[4] Livro do Jogador D&D 5e (PT-BR), Categorias De Tamanho, p. 193"
+      ],
+      "latencia_s": 1.087
+    },
+    {
+      "id": "v12",
+      "elemento": "tabela tamanho",
+      "correta": true,
+      "abstencao": false,
+      "citou_visao": false,
+      "resposta": "Uma criatura Enorme ocupa um espaço de 4,5 metros por 4,5 metros em combate [3].",
+      "fontes": [
+        "[3] Livro do Jogador D&D 5e (PT-BR), Categorias De Tamanho, p. 193"
+      ],
+      "latencia_s": 1.093
+    }
+  ],
+  "texto+visao": [
+    {
+      "id": "v01",
+      "elemento": "tabela modificadores",
+      "correta": true,
+      "abstencao": false,
+      "citou_visao": true,
+      "resposta": "Para um valor de habilidade 15, o modificador é +2 [1][3].",
+      "fontes": [
+        "[1] Livro do Jogador D&D 5e (PT-BR), Tabela: Valores E Modificadores De Habilidade, p. 175 (leitura visual)",
+        "[3] Livro do Jogador D&D 5e (PT-BR), Valores E Modificadores De Habilidade, p. 175"
+      ],
+      "latencia_s": 6.845
+    },
+    {
+      "id": "v02",
+      "elemento": "tabela modificadores",
+      "correta": true,
+      "abstencao": false,
+      "citou_visao": true,
+      "resposta": "Um personagem com Força 8 possui um modificador de -1 [5].",
+      "fontes": [
+        "[5] Livro do Jogador D&D 5e (PT-BR), Tabela: Valores E Modificadores De Habilidade, p. 175 (leitura visual)"
+      ],
+      "latencia_s": 1.043
+    },
+    {
+      "id": "v03",
+      "elemento": "tabela modificadores",
+      "correta": true,
+      "abstencao": false,
+      "citou_visao": true,
+      "resposta": "O modificador para um valor de habilidade 30 é +10 [1][2][3].",
+      "fontes": [
+        "[1] Livro do Jogador D&D 5e (PT-BR), De Habilidade, p. 175",
+        "[2] Livro do Jogador D&D 5e (PT-BR), Tabela: Valores E Modificadores De Habilidade, p. 175 (leitura visual)",
+        "[3] Livro do Jogador D&D 5e (PT-BR), Valores E Modificadores De Habilidade, p. 175"
+      ],
+      "latencia_s": 1.245
+    },
+    {
+      "id": "v04",
+      "elemento": "tabela modificadores",
+      "correta": true,
+      "abstencao": false,
+      "citou_visao": true,
+      "resposta": "Quem tem Destreza 21 possui um modificador de +5 [5].",
+      "fontes": [
+        "[5] Livro do Jogador D&D 5e (PT-BR), Tabela: Valores E Modificadores De Habilidade, p. 175 (leitura visual)"
+      ],
+      "latencia_s": 1.061
+    },
+    {
+      "id": "v05",
+      "elemento": "tabela CD",
+      "correta": true,
+      "abstencao": false,
+      "citou_visao": true,
+      "resposta": "A CD de uma tarefa difícil é 20 [1][3].",
+      "fontes": [
+        "[1] Livro do Jogador D&D 5e (PT-BR), Tabela: Classes De Dificuldade Típicas, p. 176 (leitura visual)",
+        "[3] Livro do Jogador D&D 5e (PT-BR), Classes De Dificuldade Típicas, p. 176"
+      ],
+      "latencia_s": 1.03
+    },
+    {
+      "id": "v06",
+      "elemento": "tabela CD",
+      "correta": true,
+      "abstencao": false,
+      "citou_visao": true,
+      "resposta": "A CD de uma tarefa classificada como quase impossível é 30 [1][2].",
+      "fontes": [
+        "[1] Livro do Jogador D&D 5e (PT-BR), Tabela: Classes De Dificuldade Típicas, p. 176 (leitura visual)",
+        "[2] Livro do Jogador D&D 5e (PT-BR), Classes De Dificuldade Típicas, p. 176"
+      ],
+      "latencia_s": 1.957
+    },
+    {
+      "id": "v07",
+      "elemento": "tabela ritmo",
+      "correta": true,
+      "abstencao": false,
+      "citou_visao": true,
+      "resposta": "Em ritmo lento, o grupo viaja 27 quilômetros por dia [1][4].",
+      "fontes": [
+        "[1] Livro do Jogador D&D 5e (PT-BR), Tabela: Ritmo De Viagem, p. 184 (leitura visual)",
+        "[4] Livro do Jogador D&D 5e (PT-BR), Ritmo De Viagem, p. 184"
+      ],
+      "latencia_s": 1.164
+    },
+    {
+      "id": "v08",
+      "elemento": "tabela ritmo",
+      "correta": true,
+      "abstencao": false,
+      "citou_visao": true,
+      "resposta": "Ao viajar em ritmo rápido, o grupo sofre uma penalidade de –5 no valor de Sabedoria (Percepção) passivo [3][5].",
+      "fontes": [
+        "[3] Livro do Jogador D&D 5e (PT-BR), Tabela: Ritmo De Viagem, p. 184 (leitura visual)",
+        "[5] Livro do Jogador D&D 5e (PT-BR), Ritmo De Viagem, p. 184"
+      ],
+      "latencia_s": 1.405
+    },
+    {
+      "id": "v09",
+      "elemento": "tabela ritmo",
+      "correta": true,
+      "abstencao": false,
+      "citou_visao": true,
+      "resposta": "O grupo anda 90 metros por minuto em ritmo normal [1][2].",
+      "fontes": [
+        "[1] Livro do Jogador D&D 5e (PT-BR), Tabela: Ritmo De Viagem, p. 184 (leitura visual)",
+        "[2] Livro do Jogador D&D 5e (PT-BR), Ritmo De Viagem, p. 184"
+      ],
+      "latencia_s": 1.008
+    },
+    {
+      "id": "v10",
+      "elemento": "tabela tamanho",
+      "correta": false,
+      "abstencao": true,
+      "citou_visao": false,
+      "resposta": "Não encontrei essa regra no material carregado, então prefiro não responder.",
+      "fontes": [],
+      "latencia_s": 0.956
+    },
+    {
+      "id": "v11",
+      "elemento": "tabela tamanho",
+      "correta": true,
+      "abstencao": false,
+      "citou_visao": true,
+      "resposta": "O espaço de uma criatura Miúda é de 0,75 m por 0,75 m [4][5].",
+      "fontes": [
+        "[4] Livro do Jogador D&D 5e (PT-BR), Categorias De Tamanho, p. 193",
+        "[5] Livro do Jogador D&D 5e (PT-BR), Tabela: Categorias De Tamanho, p. 193 (leitura visual)"
+      ],
+      "latencia_s": 0.967
+    },
+    {
+      "id": "v12",
+      "elemento": "tabela tamanho",
+      "correta": true,
+      "abstencao": false,
+      "citou_visao": true,
+      "resposta": "Uma criatura Enorme ocupa um espaço de 4,5 m por 4,5 m em combate [3][4].",
+      "fontes": [
+        "[3] Livro do Jogador D&D 5e (PT-BR), Tabela: Categorias De Tamanho, p. 193 (leitura visual)",
+        "[4] Livro do Jogador D&D 5e (PT-BR), Categorias De Tamanho, p. 193"
+      ],
+      "latencia_s": 1.041
+    }
+  ],
+  "acerto_texto": 0.75,
+  "acerto_texto+visao": 0.9167,
+  "custo_visao": {
+    "gemini-3.5-flash-lite": {
+      "paginas": 12,
+      "tokens_entrada_por_pagina": 1423,
+      "tokens_saida_por_pagina": 182,
+      "latencia_media_s": 2.2,
+      "capitulares_lidas": [
+        "Barulho",
+        "Magia",
+        "Nvestigar",
+        "Seis"
+      ]
+    },
+    "gemini-3.5-flash": {
+      "paginas": 12,
+      "tokens_entrada_por_pagina": 1423,
+      "tokens_saida_por_pagina": 194,
+      "latencia_media_s": 21.4,
+      "capitulares_lidas": [
+        "A",
+        "INVESTIGAR",
+        "O",
+        "Seis"
+      ]
+    }
+  }
+}
